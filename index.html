@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Aprendizagem - Anhanguera</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- JS -->
+    <script src="js/jquery.js" defer></script>
+    <script src="js/ancora.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/imc.js" defer></script>
+    <script src="js/cep.js" defer></script>
+    <script src="js/carregarDados.js" defer></script>
+</head>
+
+<body>
+    <!-- AREA DO MENU -->
+    <div id="caixa_menu">
+        <nav id="menu" class="center">
+            <div id="logo"></div>
+            <div class="item_menu">Home</div>
+            <div class="item_menu"><a href="#empresa">Equipe</a></div>
+            <div class="item_menu"><a href="#produtos">Treinos</a></div>
+            <div class="item_menu"><a href="#servicos">Saúde</a></div>
+            <div class="item_menu"><a href="#footer">Contatos</a></div>
+        </nav>
+    </div>
+
+    <!-- AREA DO CABEÇALHO -->
+    <header id="header" class="back_image">
+        <div id="caixa_header" class="center">
+            <div id="slogan">
+                <h2>Calcule seu IMC</h2>
+                <div id="imc">
+                    <form>
+                        <div class="item-total-100">
+                            <label for="peso">Peso (kg):</label>
+                            <input type="text" name="txt_peso" id="peso" value="" class="valor" placeholder="Ex: 70">
+                        </div>
+
+                        <div class="item-total-100">
+                            <label for="altura">Altura (m):</label>
+                            <input type="text" name="txt_altura" id="altura" value="" class="valor" placeholder="Ex: 1.75">
+                        </div>
+
+                        <input type="button" name="btn_calcular" id="calcular" value="Calcular" class="botao">
+                        <input type="button" name="btn_limpar" id="limpar" value="Limpar" class="limpar">
+                    </form>
+                </div>
+                <div id="resultado_imc">
+                    <h2>Resultado</h2>
+                    <p>Valor do IMC:&nbsp; <span id="resultado_valor_imc">0</span></p>
+                    <p>Status do IMC:&nbsp;<span id="resultado_status_imc">0</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO A EMPRESA -->
+    <section id="empresa">
+       
+        <div id="caixa_empresa" class="center">
+            <header class="titulo">
+                <h1>Equipe <span>Marimba</span></h1>
+            </header>
+
+            <div class="conteudo">
+                <div class="historico">
+                    <div class="imagem_historico">
+                        <img src="imagens/equipe-marimba.png" alt="Foto da academia Anhanguera">
+                    </div>
+                </div>
+
+                <div class="evolucao">
+                    <div class="caixa_evolucao">
+                        <div class="caixa_titulo">MUSCULAÇÃO</div>
+                        <div class="caixa_imagem"><img src="imagens/musculacao.png" alt="Ícone de musculação"></div>
+                        <div class="caixa_texto">Musculação é o treino com pesos para ganhar força, massa muscular e melhorar a saúde física.</div>
+                    </div>
+
+                    <div class="caixa_evolucao">
+                        <div class="caixa_titulo">FITDANCE</div>
+                        <div class="caixa_imagem"><img src="imagens/fitdance.png" alt="Ícone de fitdance"></div>
+                        <div class="caixa_texto">FitDance é uma modalidade de dança fitness que mistura coreografias animadas com exercícios físicos.</div>
+                    </div>
+
+                    <div class="caixa_evolucao">
+                        <div class="caixa_titulo">CARDIO</div>
+                        <div class="caixa_imagem"><img src="imagens/cardio.png" alt="Ícone de natação"></div>
+                        <div class="caixa_texto">Cardio é um tipo de exercício que melhora o condicionamento do coração e a resistência física, como correr, pedalar ou dançar.</div>
+                    </div>
+
+                    <div class="caixa_evolucao">
+                        <div class="caixa_titulo">Paradinhas</div>
+                        <div class="caixa_imagem"><img src="imagens/danone.png" alt="Ícone de aeróbico"></div>
+                        <div class="caixa_texto">Anabolizantes são substâncias que aumentam a massa muscular, mas seu uso indevido pode causar danos à saúde</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PRODUTOS -->
+    <section id="produtos" class="back_image">
+        <div id="caixa_produtos" class="center">
+            <div id="mensagen" class="center">
+              <strong>Regras:</strong> <br>
+
+<strong>1° </strong>Para marcar 1 ponto vc precisa fazer pelo menos 1 hora de treino no dia, mais tempo de treino não marca mais ponto.<br>
+
+<strong>2° </strong>Se não treinar por 1 dia, não marca o ponto. Apartir do segundo dia consecutivo sem treino, cada dia sem treinar vale -1 ponto.<br>
+
+<strong>3° </strong>Se fizer 2 semanas seguidas, ou seja 14 dias, vc ganha 1 ponto extra para cada semana consecutiva, ou seja, 14 dias seguidos da 1 ponto extra, 21 dias, mais 1 extra, então apartir da segunda semana sem falhar nenhum dia, vc faz 8 pontos por semana.<br>
+
+<strong>Ao final, caso haja empate la no natal, o premio é dividido.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE SERVIÇOS -->
+    <section id="servicos">
+        <div id="caixa_servicos" class="center">
+            <div class="item_servico">
+                <div class="imagem_servico">
+                    <img src="imagens/6750831.png" alt="Ícone representando saúde e bem-estar">
+                </div>
+                <div class="texto_servico">
+                    <h2>Saúde</h2>
+                    <p>Tabela aproximada de quantidade de água por dia de acordo com o peso corporal, usando a média de 35–40 ml por kg:<br>
+
+ <h4>Quantidade de Água Recomendada por Peso</h4>
+    <ul class="'lista_agua">
+        <li>50 kg: 1,75 – 2,0 litros/dia</li>
+        <li>55 kg: 1,9 – 2,2 litros/dia</li>
+        <li>60 kg: 2,1 – 2,4 litros/dia</li>
+        <li>65 kg: 2,3 – 2,6 litros/dia</li>
+        <li>70 kg: 2,45 – 2,8 litros/dia</li>
+        <li>75 kg: 2,6 – 3,0 litros/dia</li>
+        <li>80 kg: 2,8 – 3,2 litros/dia</li>
+        <li>85 kg: 3,0 – 3,4 litros/dia</li>
+        <li>90 kg: 3,15 – 3,6 litros/dia</li>
+        <li>95 kg: 3,3 – 3,8 litros/dia</li>
+        <li>100 kg: 3,5 – 4,0 litros/dia</li>
+    </ul></p>
+                </div>
+            </div>
+
+            <div class="item_servico">
+                <div class="texto_servico">
+                    <h2>Treinamento</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+                </div>
+                <div class="imagem_servico">
+                    <img src="imagens/fitness-belo-corpo-lll-paulista-45285_61097875ea0ec.png" alt="Pessoa se exercitando na academia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CONTATOS -->
+    <section id="contatos">
+        <div id="caixa_contato" class="center">
+            <div class="titulo">
+                <span>VENHA JÁ PARA A</span>
+                <h1>MARIMBA</h1>
+            </div>
+
+            <div id="form-cep">
+                <div id="titulo"><h1>Sua matrícula agora</h1></div>
+                <form name="frmCEP" id="formulario">
+                    <div class="item-total-100">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="txtnome" id="nome" maxlength="100" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="item-total-50">
+                        <label for="input-cep">CEP:</label>
+                        <input type="text" name="txtcep" id="input-cep" maxlength="9" placeholder="Digite seu CEP">
+                        <input type="button" name="btnpesquisar" value="Consultar" id="pesquisar">
+                    </div>
+
+                    <div class="item-total-100">
+                        <label for="logradouro">Logradouro:</label>
+                        <input type="text" name="txtlogradouro" id="logradouro" maxlength="100" placeholder="Rua, avenida, etc.">
+                    </div>
+
+                    <div class="item-total-30">
+                        <label for="numero">Número:</label>
+                        <input type="text" name="txtnro" id="numero" maxlength="10" placeholder="Número">
+                    </div>
+
+                    <div class="item-total-40">
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" name="txtcompl" id="complemento" maxlength="15" placeholder="Apartamento, bloco, etc.">
+                    </div>
+
+                    <div class="item-total-40">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" name="txtbairro" id="bairro" maxlength="30" placeholder="Digite seu bairro">
+                    </div>
+
+                    <div class="item-total-40">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" name="txtcidade" id="cidade" maxlength="50" placeholder="Digite sua cidade">
+                    </div>
+
+                    <div class="item-total-30">
+                        <label for="estado">Estado:</label>
+                        <input type="text" name="txtuf" id="estado" maxlength="2" placeholder="UF">
+                    </div>
+
+                    <div class="item-total-40">
+                        <label for="pais">País:</label>
+                        <input type="text" name="txtpais" id="pais" maxlength="30" placeholder="Brasil">
+                    </div>
+
+                    
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+<div class="seta" id="btnTopo"></div>
+
+<script>
+    const btnTopo = document.getElementById('btnTopo');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            btnTopo.classList.add('mostrar');
+        } else {
+            btnTopo.classList.remove('mostrar');
+        }
+    });
+
+    btnTopo.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+
+    <!-- AREA DO RODAPÉ -->
+    <footer id="footer">
+       <div id="caixa_footer" class="center">
+           Academia ANHANGUERA - by Prof. Marcel
+       </div>
+    </footer>
+</body>
+</html>
